@@ -23,5 +23,13 @@ pipeline {
         }
       }
     }
+    stage ('Deliver') {
+      steps {
+        container ('node6') {
+          sh './jenkins/scripts/deliver.sh'
+          input message: 'Finished using the web site? (Click "Proceed" to continue)'
+        }
+      }
+    }
   }
 }
