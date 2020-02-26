@@ -1,0 +1,10 @@
+kind: Pod
+metadata:
+  name: node-alpine-pod
+spec:
+  containers:
+  - name: node6
+    image: node:6-alpine
+    command:
+    - cat
+    tty: true
