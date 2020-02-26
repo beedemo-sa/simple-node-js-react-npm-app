@@ -9,7 +9,7 @@ pipeline {
     stage ('Build') {
       steps {
         container ('node6') {
-          'npm install'
+          sh 'npm install'
         }
       }
     }
